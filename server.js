@@ -17,7 +17,8 @@ hbs.registerHelper('screamIt', (text)=>{
 //view engine
 app.set('view engine','hbs');
 
-
+//setting up enviroment var for heroku
+const port=process.env.PORT || 3000;
 
 //middleware
 app.use((req,res,next)=>{
@@ -60,4 +61,6 @@ app.get('/bad',(req,res)=>{
 });
 
 
-app.listen(3000);
+app.listen(port,()=>{
+    console.log(`server is up on port ${port}`);
+});
