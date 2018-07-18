@@ -50,7 +50,7 @@ app.get('/',(req,res)=>{
 
 app.get('/about',(req,res)=>{
     res.render('about',{
-        pageTitle:'Obito Uchiha',
+        pageTitle:'Obito Uchiha'
     });
 });
 
@@ -60,6 +60,11 @@ app.get('/bad',(req,res)=>{
     });
 });
 
+app.get('/projects',(req,res)=>{
+    res.render('projects',{
+        projectText:'Portfolio page here!!!'
+    });
+});
 
 app.listen(port,()=>{
     console.log(`server is up on port ${port}`);
